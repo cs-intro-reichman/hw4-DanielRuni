@@ -2,7 +2,6 @@ public class Primes {
     public static void main(String[] args) {
         int  n = Integer.parseInt(args[0]);
         boolean [] primeNumbers = findPrimes(n);
-        println(primeNumbers);
         printPrimes(primeNumbers, n);
     }
 
