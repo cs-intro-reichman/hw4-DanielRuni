@@ -34,10 +34,13 @@ public class MyString {
         int sw = 0;
         if (str2.length() > str1.length()) {
             return false;
-        } else if ((str1.length() == 0) || (str2.length() == 0)) {
+        } else if (str1.length() == 0) {
+            return false;
+        } else if (str2.length() == 0) {
             return true;
         }
         for (int i=0; i<=(str1.length() - str2.length()); i++) {
+            sw = 0;
             if (str1.charAt(i) == str2.charAt(0)) {
                 for (int j=0; j<str2.length(); j++) {
                     if (str1.charAt(i+j) != str2.charAt(j)) {
@@ -46,7 +49,7 @@ public class MyString {
                     }
                 }
                 if (sw == 0) {
-                    return true;
+                    return true;    
                 }
             }
         }
